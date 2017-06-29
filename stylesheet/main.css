@@ -310,6 +310,7 @@ label {
     font-weight: 700;
     color: #203040;
     padding: 6px 0px 6px 8px;
+    opacity: 0.8;
 }
 
 input {
@@ -341,16 +342,24 @@ fieldset button {
 
 
 footer {
-    width: 100vw;
-    height: 20vh;
+    display: flex;
+    height: 15vh;
+    justify-content: center;
+    width: 100%;
     background-color: #203040;
 }
 
-footer p {
+footer p,footer a, small {
     color: #FEC606;
     font-size: 12px;
-    padding: 0;
-    opacity: 0.5;
+    padding: 8px;
+    margin: 0 20px;
+    font-family: 'Lato';
+    font-weight: 700;
+}
+
+footer a {
+    text-decoration: none;
 }
 
 .headroom {
@@ -376,4 +385,43 @@ footer p {
     display: flex;
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%)
+}
+
+
+@media all and (max-width: 599px) {
+    .aboutMePage {
+        height: 100%;
+        padding-bottom: 42px;
+    }
+    
+    .button {
+        width: 65vw;
+    }
+    
+    figure {
+        height: 100%;
+    }
+    
+    figure img {
+        width: 100%;
+    }
+    
+    figcaption {
+        padding-top: 32px;
+    }
+    
+    figure img:hover,
+    img:active {
+        transform: scale(0.8)
+    }
+    
+    footer {
+        height: 20vh;
+        
+    }
+    
+    footer p,footer a, small{
+        font-size: 10px;
+        font-weight: 100;
+    }
 }
